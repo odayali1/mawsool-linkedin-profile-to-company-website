@@ -1,0 +1,30 @@
+{
+  "actorSpecification": 1,
+  "title": "LinkedIn Profile to Company Website",
+  "description": "One profile URL is one row and one charge.",
+  "fields": {
+    "type": "object",
+    "properties": {
+      "inputUrl": { "type": ["string", "null"], "title": "inputUrl" },
+      "fullName": { "type": ["string", "null"], "title": "fullName" },
+      "headline": { "type": ["string", "null"], "title": "headline" },
+      "companyName": { "type": ["string", "null"], "title": "companyName" },
+      "companyUrl": { "type": ["string", "null"], "title": "companyUrl" },
+      "website": { "type": ["string", "null"], "title": "website" },
+      "industry": { "type": ["string", "null"], "title": "industry" },
+      "success": { "type": "boolean", "title": "success" }
+    }
+  },
+  "views": {
+    "flat": {
+      "title": "Flat results",
+      "transformation": {
+        "fields": ["inputUrl", "fullName", "headline", "companyName", "companyUrl", "website", "industry", "success"]
+      },
+      "display": {
+        "component": "table",
+        "properties": {}
+      }
+    }
+  }
+}

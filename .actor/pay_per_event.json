@@ -1,0 +1,18 @@
+{
+  "actorSpecification": 1,
+  "events": {
+    "profile-company-website": {
+      "title": "Employer website",
+      "description": "One LinkedIn profile URL processed. The profile lookup and the company lookup are included.",
+      "isPrimaryEvent": true,
+      "eventTieredPricingUsd": {
+        "FREE": { "tieredEventPriceUsd": 0.0015 },
+        "BRONZE": { "tieredEventPriceUsd": 0.0014 },
+        "SILVER": { "tieredEventPriceUsd": 0.0012 },
+        "GOLD": { "tieredEventPriceUsd": 0.001 },
+        "PLATINUM": { "tieredEventPriceUsd": 0.00085 },
+        "DIAMOND": { "tieredEventPriceUsd": 0.0007 }
+      }
+    }
+  }
+}

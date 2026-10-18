@@ -1,0 +1,61 @@
+{
+  "title": "LinkedIn Profile to Employer Company Website",
+  "type": "object",
+  "schemaVersion": 1,
+  "description": "Turn a LinkedIn profile URL into the current employer's company website. Also returns the company name and company URL when they are on record. One charge per profile, $1.50 per 1,000. You supply the profile URL. Starting from $0.70 per 1,000",
+  "properties": {
+    "urls": {
+      "title": "LinkedIn profile URLs",
+      "type": "array",
+      "description": "Add linkedin.com/in/... URLs. Each URL returns the current employer website.",
+      "editor": "stringList",
+      "prefill": [
+        "https://www.linkedin.com/in/example"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "urlsCsv": {
+      "title": "Or paste CSV",
+      "type": "string",
+      "description": "A url column. One URL per row is also accepted.",
+      "editor": "textarea",
+      "prefill": "url\nhttps://www.linkedin.com/in/example"
+    },
+    "fileUrl": {
+      "title": "Or upload a CSV file",
+      "type": "string",
+      "description": "CSV with a url or linkedinUrl column.",
+      "editor": "fileupload"
+    },
+    "maxUrls": {
+      "title": "Maximum URLs",
+      "type": "integer",
+      "default": 100,
+      "minimum": 1,
+      "maximum": 50000,
+      "description": "Cost-control cap. Maximum 50,000. A list over 200 continues if the run stops."
+    },
+    "concurrency": {
+      "title": "Concurrent requests",
+      "type": "integer",
+      "description": "How many profiles to look up at the same time.",
+      "default": 10,
+      "minimum": 1,
+      "maximum": 40
+    },
+    "resumeId": {
+      "title": "Resume ID (optional)",
+      "type": "string",
+      "description": "Reuse this ID to skip profiles that already succeeded.",
+      "editor": "textfield"
+    },
+    "freshStart": {
+      "title": "Look up finished profiles again",
+      "type": "boolean",
+      "description": "Turn this on to ignore saved progress and look up the whole list again.",
+      "default": false
+    }
+  }
+}

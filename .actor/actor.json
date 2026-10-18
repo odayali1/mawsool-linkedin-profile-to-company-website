@@ -1,0 +1,41 @@
+{
+  "$schema": "https://apify.com/schemas/v1/actor.ide.json",
+  "actorSpecification": 1,
+  "name": "mawsool-linkedin-profile-to-company-website",
+  "title": "LinkedIn Profile to Employer Company Website",
+  "description": "Turn a LinkedIn profile URL into the current employer's company website. Also returns the company name and company URL when they are on record. One charge per profile, $1.50 per 1,000. You supply the profile URL. Starting from $0.70 per 1,000. No LinkedIn login and no cookies.",
+  "seoTitle": "LinkedIn Profile URL to Company Website",
+  "seoDescription": "Current employer website from a LinkedIn profile URL. Starting from $0.70 per 1,000. No login and no cookies.",
+  "categories": [
+    "LEAD_GENERATION",
+    "SOCIAL_MEDIA",
+    "AUTOMATION"
+  ],
+  "version": "1.0",
+  "buildTag": "latest",
+  "minMemoryMbytes": 256,
+  "maxMemoryMbytes": 1024,
+  "defaultRunOptions": {
+    "build": "latest",
+    "timeoutSecs": 21600,
+    "memoryMbytes": 256
+  },
+  "environmentVariables": {
+    "CHARGE_EVENT": "profile-company-website",
+    "GUEST_API_BASE_URL": "https://guest.mawsool.tech",
+    "GUEST_API_KEY": "@mawsoolGuestApiKey",
+    "COMPANY_API_BASE_URL": "http://company-lockup.34.166.92.24.sslip.io",
+    "COMPANY_API_KEY": "@mawsoolCompanyApiKey"
+  },
+  "meta": {
+    "templateId": "ts-empty",
+    "generatedBy": "Cursor Agent"
+  },
+  "input": "./input_schema.json",
+  "output": "./output_schema.json",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  },
+  "pricing": "./pay_per_event.json",
+  "dockerfile": "../Dockerfile"
+}
