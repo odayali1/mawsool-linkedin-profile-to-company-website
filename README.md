@@ -91,9 +91,7 @@ Yes. Up to 50,000 URLs. Ten profiles run at a time, and you can raise that to 40
 | Free | $1.50 / 1,000 | $1.80 / 1,000 |
 | Bronze | $1.40 | $1.65 |
 | Silver | $1.20 | $1.50 |
-| Gold | $1.00 | $1.20 |
-| Platinum | $0.85 | $1.00 |
-| Diamond | $0.70 | $0.80 |
+| Gold, Platinum, and Diamond | $0.70 | $0.80 |
 
 ## Related Actors
 
