@@ -13,7 +13,7 @@ type Input = {
 
 const PROFILE_BASE = (process.env.GUEST_API_BASE_URL || 'https://guest.mawsool.tech').replace(/\/+$/, '');
 const PROFILE_KEY = process.env.GUEST_API_KEY?.trim();
-const COMPANY_BASE = (process.env.COMPANY_API_BASE_URL || 'http://company-lockup.34.166.92.24.sslip.io').replace(/\/+$/, '');
+const COMPANY_BASE = (process.env.COMPANY_API_BASE_URL || 'https://guest.mawsool.tech').replace(/\/+$/, '');
 const COMPANY_KEY = process.env.COMPANY_API_KEY?.trim();
 const EVENT = process.env.CHARGE_EVENT || 'profile-company-website';
 const HARD_MAX = 50_000;
